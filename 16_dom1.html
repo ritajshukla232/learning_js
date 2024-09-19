@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Learning DOM </title>
+</head>
+<style> 
+body{
+    background-color: black;
+    color: aliceblue;
+}
+    </style>
+<body>
+    <ul class="language">
+        <li> javascript </li>
+    </ul>
+</body>
+<script>
+     function addLang (langname) {
+       let li = document.createElement(`li`)
+       li.innerHTML = `${langname}`
+       document.querySelector(`.language`).appendChild(li)
+     }
+     addLang("python")
+     addLang("HTML")
+     addLang("CSS")
+     addLang("java")
+
+     // edit
+
+     const secondlang = document.querySelector("li:nth-child(2)");
+     const newli = document.createElement(`li`)
+     newli.textContent =" replace ho gya"
+     secondlang.replaceWith(newli)
+
+     //edit2
+     const firstlang = document.querySelector("li:first-child")
+     firstlang.outerHTML = "<li> typescript </li>"
+
+     // remove
+     const lastLang = document.querySelector("li:last-child");
+     lastLang.remove();
+
+     </script>
+</html>
