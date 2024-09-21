@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first projects</title>
+</head>
+<style>
+.button{
+    height: 10%;
+     width: 120px; 
+    border: 1px solid black;
+}
+#grey{
+    height: 120px;
+    background-color: grey;
+    margin-bottom: 4px;
+}
+#red{
+    height: 120px;
+    background-color: rgb(221, 31, 31);
+    margin-bottom: 4px;
+}
+#blue{
+    height: 120px;
+    background-color: rgb(24, 34, 234);
+    margin-bottom: 4px;
+}
+#yellow{
+    height: 120px;
+    background-color: yellow;
+    margin-bottom: 4px;
+}
+</style>
+<body>
+    
+     <h1> Color Scheme Switcher</h1>
+     <div class="button" id="grey"> click in this block to change body color </div>
+     <div class="button" id="red">  click in this block to change body color</div>
+     <div class="button" id="blue"> click in this block to change body color</div>
+     <div class="button" id="yellow"> click in this block to change body color</div>
+     <h2> try clicking on one of the colors above
+        <span> to change the background color of this pagel!</span>
+     </h2>
+
+</body>
+<script>
+    const buttons = document.querySelectorAll(`.button`)
+    const body = document.querySelector(`body`)
+
+    buttons.forEach( function (button) {
+        console.log(button);
+        button.addEventListener(`click`, function(e){
+            console.log(e);
+            console.log(e.target);
+            if( e.target.id === `grey`){
+                body.style.backgroundColor =e.target.id;
+            }
+           
+            if( e.target.id === "red") {
+                body.style.backgroundColor = e.target.id;
+            }
+            if( e.target.id === "blue") {
+                body.style.backgroundColor = e.target.id;
+            }
+            if( e.target.id === "yellow") {
+                body.style.backgroundColor = e.target.id;
+            }
+        });
+    });
+
+</script>
+</html>
