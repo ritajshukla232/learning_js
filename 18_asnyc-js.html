@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> async in javascript</title>
+</head>
+<body>
+    <h1>learning javascript</h1>
+    <button id="stop"> stop</button>
+</body>
+<script>
+    console.log("one");
+    console.log("two");
+    function hello() {
+        console.log("hello")
+    }
+    // setTimeout( () => {
+    //     console.log("hello")
+    // }, 3000)
+    setTimeout(hello, 3000 );
+    
+    console.log("three")
+    console.log("four")
+//  promises
+ let promise = new Promise((resolve, reject)=>
+ {
+    console.log("i am prommise");
+    resolve("resolve ho gya");
+ });
+
+ // Async & await
+ function api (){
+    return  promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("weather data")
+            resolve(200)
+        }, 1000);
+    });
+ }
+ 
+  async function getweather() {
+    await api();
+    await api();
+  }
+
+
+  function getdata(dataId){
+    return  promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("data", dataId)
+            resolve(200)
+        }, 1000);
+    });
+ }
+ 
+  async function getAllData() {
+    console.log("getting data 1")
+    await getdata(1);
+    console.log("getting data 2")
+    await getdata(2);
+    console.log("getting data 3")
+    await getdata(3);
+    console.log("getting data 4")
+    await getdata(4);
+    console.log("getting data 5")
+    await getdata(5);
+    console.log("getting data 6")
+    await getdata(6);
+  }
+</script>
+</html>
