@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currency convertor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: rgb(238, 127, 76);
+    }
+
+    .container {
+        background-color: rgb(203, 218, 244);
+        min-width: 35vw;
+        min-height: 40vh;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    form {
+        margin: 2rem 0 1rem 0;
+    }
+
+    form 
+    input,
+    button {
+        min-width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 0.75rem;
+    }
+    form input {
+        border: 1px solid rgb(52, 49, 49);
+        height: 2rem;
+        padding-left: 1rem;
+        font-size: 1.25rem;
+    }
+    .dropdown{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content:space-between ;
+    }
+    .select-container img{
+        font-size: 1rem;
+    }
+    .select-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: aqua; */
+        width: 8rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgb(52, 49, 49);
+        padding: 0.25rem;
+    }
+    .dropdown i{
+        font-size: 1.5rem;
+    }
+   .select-container select{
+    font-size: 1.25rem;
+    width: auto;
+    border: none;
+   }
+   .MSG{
+    margin: 2rem 0 2rem 0;
+    font-size: 1.75rem;
+   }
+   button {
+    height: 3rem;
+    background-color: #af4d98;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+   }
+</style>
+
+<body>
+    <div class="container">
+        <h2> Currency convertor</h2>
+
+        <form action=".js">
+            <p> Enter ammount</p>
+            <input type="number" placeholder="1000">
+            <div class="dropdown">
+                <div class="fROM">
+                    <p>FROM</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/flat/64.png">
+                        <select name="from">
+                            <option value="USD">USD</option>
+                            <option value="INR">INR</option>
+                            <option value="EUR">EUR</option>
+                            <option value="AUD">AUD</option>
+                        </select>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <div class="TO">
+                    <p>TO</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select name="from">
+                            <option value="USD">USD</option>
+                            <option value="INR" selected>INR</option>
+                            <option value="EUR">EUR</option>
+                            <option value="AUD">AUD</option>
+                        </select>
+                    </div>
+                </div>
+
+            </div>
+            <div class="MSG"> 1 USD = 80 INR</div> 
+            <button> Get Exchange Rate</button>
+        </form>
+    </div>
+</body>
+ <script>
+    
+ </script>
+</html>
